@@ -4,6 +4,9 @@ font-family: 'Poppins', sans-serif; */
     margin: 0;
     box-sizing: border-box;
 }
+main{
+    overflow: hidden;
+}
 .yu-header{
     top: 44px;
     right: 0;
@@ -399,10 +402,45 @@ nav a:hover{
     color: #fff;
 }
 
+[class*="yu-modes-section"] > .container{
+    max-width:1550px ;
+}
+.yu-modes-section-1{
+    position: relative;
+    padding: 102px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/yu-modes-section-1-bg.png');
+}
+.yu-modes-section-1::after{
 
-
-
-
+}
+.yu-modes-section-1 .yu-modes-content h1{
+    color: #1F1F1F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 10px;
+}
+.yu-modes-content{
+    padding: 180px 0 240px;
+}
+.yu-modes-section-1 .yu-modes-content p{
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.yu-modes-thumbnail img {
+    max-width: 1100px;
+    margin: 0 auto -280px -130px;
+}
 
 
 
