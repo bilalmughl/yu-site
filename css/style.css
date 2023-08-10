@@ -70,7 +70,7 @@ nav a:hover{
 }
 .main-banner-outer{
     position: relative;
-    background-image: url('../img/main-banner-bg.svg');
+    background-image: url('../img/main-banner-bg.png');
     background-repeat: no-repeat;
     background-position: bottom center;
     padding: 235px 0;
@@ -277,7 +277,7 @@ nav a:hover{
     position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url('../img/contact-bg-after.svg');
+    background-image: url('../img/contact-bg-after.png');
 }
 .main-contact-outer .container{
     max-width: 1155px;
