@@ -4,14 +4,21 @@ font-family: 'Poppins', sans-serif; */
     margin: 0;
     box-sizing: border-box;
 }
-header{
+.yu-header{
     top: 44px;
     right: 0;
     left: 0;
     position: fixed;
     z-index: 2;
+    transition: all .3s ease-in-out;
 }
-header .container {
+.yu-header.sticky{
+    top: 0;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px 0px rgba(82, 82, 82, 0.09);
+    transition: all .3s ease-in-out;
+}
+.yu-header .container {
     display: flex;
     align-items: center;
     margin: auto;
@@ -21,6 +28,12 @@ header .container {
     background: #F5F5F5;
     box-shadow: 0px 4px 4px 0px rgba(82, 82, 82, 0.09);
     backdrop-filter: blur(6px);
+    transition: all .3s ease-in-out;
+}
+.yu-header.sticky .container{
+    box-shadow: none;
+    backdrop-filter: inherit;
+    transition: all .3s ease-in-out;
 }
 .col-logo img{
     vertical-align: bottom;

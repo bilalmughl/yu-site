@@ -1,4 +1,27 @@
 $(document).ready(function() {
+    // Define the element you want to add the class to
+    var targetElement = $('.yu-header');
+
+    // Define the scroll point at which you want to add the class
+    var scrollPoint = 100; // Adjust this value as needed
+
+    // Bind the scroll event to the window
+    $(window).scroll(function() {
+        // Get the current scroll position
+        var scrollPosition = $(window).scrollTop();
+
+        // Check if the scroll position is greater than the defined scroll point
+        if (scrollPosition > scrollPoint) {
+        // Add the desired class to the target element
+        targetElement.addClass('sticky');
+        } else {
+        // Remove the class if the scroll position is less than the scroll point
+        targetElement.removeClass('sticky');
+        }
+    });
+
+
+
     $(".tabs a").click(function(e) {
         e.preventDefault();
 
