@@ -126,7 +126,12 @@ nav a:hover{
     padding: 8.5px 19.5px;
     border-radius: 34.929px;
     background: #F0F0F0;
+    transition: all .3s ease-in-out;
     backdrop-filter: blur(5.925436496734619px);
+}
+.btn-wrapper .btn:hover{
+    color: #fff;
+    background-color: #11B4E2;
 }
 .iphone-image-wrapper{
     position: relative;
@@ -187,6 +192,10 @@ nav a:hover{
     font-size: 24px;
     text-decoration: none;
 }
+.ft-social-list a:hover{
+    color:#11B4E2;
+    transition: all .3s ease-in-out;
+}
 .yt-ft-heading{
     color: #1F1F1F;
     /* Text L/Semibold */
@@ -211,6 +220,9 @@ nav a:hover{
     font-weight: 500;
     line-height: 24px; /* 150% */
     letter-spacing: -0.1px;
+}
+.ft-nav-list a:hover{
+    text-decoration: underline;
 }
 .yu-footer .container .row > .col-auto.ms-auto{
     margin-right: 103px;
