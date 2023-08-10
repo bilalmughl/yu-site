@@ -277,7 +277,6 @@ nav a:hover{
     position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: bottom center;
     background-image: url('../img/contact-bg-after.svg');
 }
 .main-contact-outer .container{
