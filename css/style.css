@@ -451,7 +451,7 @@ nav a:hover{
 
 
 .yu-modes-section-2{
-    padding: 130px 0 55px;
+    padding: 130px 0 65px;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -463,6 +463,18 @@ nav a:hover{
     margin-bottom: 70px;
 }
 
+.yu-modes-section-3{
+    padding: 123px 0 65px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/yu-modes-section-3-bg.png');
+
+}
+.yu-modes-section-3 .yu-modes-content{
+    margin-bottom: 60px;
+}
 
 
 
