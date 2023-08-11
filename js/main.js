@@ -48,32 +48,58 @@ $(document).ready(function() {
 
 
 
-    $(".yu-tab-content-nav button").click(function(e) {
+    $(".yu-tab-outer-wrapper .yu-tab-content-nav button").click(function(e) {
         e.preventDefault();
-        
+        // If the clicked button already has the "active" class, do nothing
+            if ($(this).hasClass("active")) {
+                return;
+            }
         // Get the target tab content div and image based on the clicked tab
         var targetClass = $(this).attr("class");
         var targetIndex = targetClass.replace("tab-nav-", "");
-        var targetContent = $(".tab-nav-" + targetIndex + "-content");
-        var targetImage = $(".tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
+        var targetContent = $(".yu-tab-outer-wrapper .tab-nav-" + targetIndex + "-content");
+        var targetImage = $(".yu-tab-outer-wrapper .tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
         
         // Hide all tab content divs and images
-        // $(".yu-tab-content-nav-area > [class*='tab-nav-']").has().hide();
-        $(".yu-tab-content-nav-area > [class*='tab-nav-']").not(targetContent).removeClass("active").hide();
-
+        $(".yu-tab-outer-wrapper .yu-tab-content-nav-area > [class*='tab-nav-']").hide();
         
         // Remove active class from all tab links and tab content divs
-        $(".yu-tab-content-nav button").removeClass("active");
-        $(".yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
+        $(".yu-tab-outer-wrapper .yu-tab-content-nav button").removeClass("active");
+        $(".yu-tab-outer-wrapper .yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
         
         // Add active class to the clicked tab link and tab content div
         $(this).addClass("active");
-        targetContent.addClass("active");
         
         // Show the selected tab content div and image
-        targetContent.show();
+        targetContent.show().addClass("active");;
         targetImage.show();
     });
     
+    $(".yu-tab-outer-wrapper2 .yu-tab-content-nav button").click(function(e) {
+        e.preventDefault();
+        // If the clicked button already has the "active" class, do nothing
+            if ($(this).hasClass("active")) {
+                return;
+            }
+        // Get the target tab content div and image based on the clicked tab
+        var targetClass = $(this).attr("class");
+        var targetIndex = targetClass.replace("tab-nav-", "");
+        var targetContent = $(".yu-tab-outer-wrapper2 .tab-nav-" + targetIndex + "-content");
+        var targetImage = $(".yu-tab-outer-wrapper2 .tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
+        
+        // Hide all tab content divs and images
+        $(".yu-tab-outer-wrapper2 .yu-tab-content-nav-area > [class*='tab-nav-']").hide();
+        
+        // Remove active class from all tab links and tab content divs
+        $(".yu-tab-outer-wrapper2 .yu-tab-content-nav button").removeClass("active");
+        $(".yu-tab-outer-wrapper2 .yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
+        
+        // Add active class to the clicked tab link and tab content div
+        $(this).addClass("active");
+        
+        // Show the selected tab content div and image
+        targetContent.show().addClass("active");;
+        targetImage.show();
+    });
     
 });
