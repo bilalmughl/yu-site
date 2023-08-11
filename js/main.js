@@ -44,4 +44,36 @@ $(document).ready(function() {
         targetContent.show().addClass("active"); // Add "active" class to the selected content
         targetImage.show().addClass("active"); // Add "active" class to the selected content
     });
+
+
+
+
+    $(".yu-tab-content-nav button").click(function(e) {
+        e.preventDefault();
+        
+        // Get the target tab content div and image based on the clicked tab
+        var targetClass = $(this).attr("class");
+        var targetIndex = targetClass.replace("tab-nav-", "");
+        var targetContent = $(".tab-nav-" + targetIndex + "-content");
+        var targetImage = $(".tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
+        
+        // Hide all tab content divs and images
+        // $(".yu-tab-content-nav-area > [class*='tab-nav-']").has().hide();
+        $(".yu-tab-content-nav-area > [class*='tab-nav-']").not(targetContent).removeClass("active").hide();
+
+        
+        // Remove active class from all tab links and tab content divs
+        $(".yu-tab-content-nav button").removeClass("active");
+        $(".yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
+        
+        // Add active class to the clicked tab link and tab content div
+        $(this).addClass("active");
+        targetContent.addClass("active");
+        
+        // Show the selected tab content div and image
+        targetContent.show();
+        targetImage.show();
+    });
+    
+    
 });
