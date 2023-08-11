@@ -494,7 +494,7 @@ nav a:hover{
 
 
 .yu-modes-section-4 .col-lg-6:first-child {
-    clip-path: polygon(0 0, 77% 0, 98% 100%, 0% 100%);
+    clip-path: polygon(0 0, calc(100% - 223px) 0, calc(100% - 14px) 100%, 0% 100%);
     background-color: #FFF;
     filter: drop-shadow(25px 4px 38px rgba(0, 0, 0, 0.05));
 }
@@ -547,7 +547,8 @@ nav a:hover{
     background: rgba(64, 129, 255, 0.28);
     filter: blur(86.20690155029297px);
     width: 539px;
-    right: 0;
+    right: -30px;
+    top: -75px;
     height: 453px;
 }
 .yu-tab-content-nav button{
@@ -583,4 +584,12 @@ nav a:hover{
 }
 .yu-tab-content-nav-area [class*="tab-nav-"]:not(.tab-nav-0-content) {
     display: none;
+}
+
+.yu-modes-section-5 .yu-tab-content-nav::before{
+background: rgba(165, 93, 255, 0.28);
+}
+.yu-modes-section-5 .yu-tab-content-nav button:hover,
+.yu-modes-section-5 .yu-tab-content-nav button.active{
+    background: #A55DFF;
 }
