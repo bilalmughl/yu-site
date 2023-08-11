@@ -684,7 +684,7 @@ background: rgba(165, 93, 255, 0.28);
     margin-bottom: 30px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    max-width: calc(100% - 410px);
+    max-width: calc(100% - 268px);
     margin-left: 160px;
 }
 .yu-terms-wrapper .content{
