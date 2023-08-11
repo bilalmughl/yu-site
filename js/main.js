@@ -45,7 +45,12 @@ $(document).ready(function() {
         targetImage.show().addClass("active"); // Add "active" class to the selected content
     });
 
-
+    // Add active class on click
+    $('.yu-asidebar-container li a').on('click', function(event) {
+        // event.preventDefault();
+        $('.yu-asidebar-container li a').removeClass('active');
+        $(this).addClass('active');
+    });
 
 
     $(".yu-tab-outer-wrapper .yu-tab-content-nav button").click(function(e) {
