@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Title of the webpage -->
+    <title>Yu Site</title>
+    
+    <!-- Link to Bootstrap CSS and custom stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Link to Font Awesome icons and Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section -->
+    <header class="yu-header">
+        <div class="container">
+            <div class="col-logo"><a href="index.html"><img src="img/logo.svg" alt=""></a></div>
+            <div class="col-nav">
+                <!-- Navigation links -->
+                <nav>
+                    <a href="ajax/index.html">Home</a>
+                    <a class="active" href="ajax/mode.html">Modes</a>
+                    <a href="ajax/contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Main content section -->
+    <!-- Main content section -->
+    <main style="min-height: 100dvh;">
+        <!-- Main banner -->
+        <div id="content"></div>
+    </main>
+    <!-- Footer section -->
+    <footer class="yu-footer">
+        <div class="container">
+            <di class="row">
+                <!-- About section in the footer -->
+                <div class="col-auto">
+                    <div class="yu-about-wrapper">
+                        <a class="yu-ft-logo" href="#"><img src="img/ft-logo.svg" alt="footer logo"></a>
+                        <p>Discover the power of seamless audio and video synchronization, echo-free voice, and noise cancellation.</p>
+                        <!-- Social media icons -->
+                        <ul class="ft-social-list">
+                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Products section in the footer -->
+                <div class="col-auto ms-auto">
+                    <div class="yt-ft-widget-container">
+                        <h6 class="yt-ft-heading">Products</h6>
+                        <ul class="ft-nav-list">
+                            <li><a href="#">Party</a></li>
+                            <li><a href="#">Meet</a></li>
+                            <li><a href="#">Walkie Talkie</a></li>
+                            <li><a href="#">Stage</a></li>
+                            <li><a href="#">Megaphone</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Company section in the footer -->
+                <div class="col-auto">
+                    <div class="yt-ft-widget-container">
+                        <h6 class="yt-ft-heading">Company</h6>
+                        <ul class="ft-nav-list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Plans & Pricing</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </di>
+        </div>
+    </footer>
+    
+    <!-- Copyright notice -->
+    <div class="yu-copyright"> © 2023 Younite Private Limited. All rights reserved</div>
+    <!-- JavaScript scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    // // Get references to the navigation links and content div
+    // const $navLinks = $('nav a');
+    // const $contentDiv = $('#content');
+
+    // // Event handler for navigation links
+    // $navLinks.click(function(event) {
+    //     event.preventDefault(); // Prevent default link behavior
+    //     const url = $(this).attr('href');
+    //     loadPage(url);
+    // });
+
+    // // Function to load HTML content
+    // function loadPage(url) {
+    //     $.ajax({
+    //         url: url,
+    //         method: 'GET',
+    //         dataType: 'html',
+    //         success: function(data) {
+    //             $contentDiv.html(data);
+    //         },
+    //         error: function(jqXHR, textStatus, errorThrown) {
+    //             console.error('Error loading page:', textStatus, errorThrown);
+    //         }
+    //     });
+    // }
+    // $(document).ready(function() {
+    //     // Get references to the navigation links and content div
+    //     const $navLinks = $('nav a');
+    //     const $contentDiv = $('#content');
+
+    //     // Default load 'index.html'
+    //     loadPage('ajax/index.html');
+
+    //     // Event handler for navigation links
+    //     $navLinks.click(function(event) {
+    //         event.preventDefault(); // Prevent default link behavior
+
+    //         // Remove 'active' class from all links and add to the clicked link
+    //         $navLinks.removeClass('active');
+    //         $(this).addClass('active');
+
+    //         const url = $(this).attr('href');
+    //         loadPage(url);
+    //     });
+
+    //     // Function to load HTML content
+    //     function loadPage(url) {
+    //         $.ajax({
+    //             url: url,
+    //             method: 'GET',
+    //             dataType: 'html',
+    //             success: function(data) {
+    //                 $contentDiv.html(data);
+    //             },
+    //             error: function(jqXHR, textStatus, errorThrown) {
+    //                 console.error('Error loading page:', textStatus, errorThrown);
+    //             }
+    //         });
+    //     }
+    // });
+    $(document).ready(function() {
+    // Get references to the navigation links and content div
+    const $navLinks = $('nav a');
+    const $contentDiv = $('#content');
+    const $preloader = $('<div class="preloader">Loading...</div>');
+
+    // Default load 'index.html'
+    loadPage('ajax/index.html');
+
+    // Event handler for navigation links
+    $navLinks.click(function(event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Remove 'active' class from all links and add to the clicked link
+        $navLinks.removeClass('active');
+        $(this).addClass('active');
+
+        const url = $(this).attr('href');
+        showPreloader();
+        loadPage(url);
+    });
+
+    // Function to show the preloader
+    function showPreloader() {
+        $contentDiv.empty().append($preloader);
+    }
+
+    // Function to load HTML content
+    function loadPage(url) {
+        $.ajax({
+            url: url,
+            method: 'GET',
+            dataType: 'html',
+            success: function(data) {
+                // Hide preloader and fade in the content
+                $contentDiv.fadeOut(300, function() {
+                    $contentDiv.html(data).fadeIn(300);
+                });
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('Error loading page:', textStatus, errorThrown);
+            },
+            complete: function() {
+                $preloader.remove(); // Remove preloader when content is loaded
+            }
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

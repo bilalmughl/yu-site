@@ -651,8 +651,9 @@ background: rgba(165, 93, 255, 0.28);
 }
 .yu-asidebar-container ul li a::before {
     content: counter(item) ".";
-    position: absolute;
-    left: -20px;
+    /* position: absolute; */
+    margin-right: 5px;
+    font-weight: 400;
 }
 .yu-asidebar-container ul li a{
     color: #585858;
@@ -699,6 +700,9 @@ background: rgba(165, 93, 255, 0.28);
     line-height: 219%; /* 35.04px */
     letter-spacing: 0.72px;
 }
+.yu-terms-wrapper .content p{
+    color: currentColor;
+}
 .yu-terms-wrapper .content h2{
     color: #1F1F1F;
     font-feature-settings: 'clig' off, 'liga' off;
@@ -729,3 +733,40 @@ background: #867E7E;
     border-radius: 50px;
     background: #867E7E;
 } */
+
+
+
+
+
+
+/* Style for the preloader container */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* You can adjust the height as needed */
+    font-size: 18px;
+    color: #333;
+}
+
+/* Optional: Add animation to the preloader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.preloader:before {
+    content: '';
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #333;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+.theme-color{
+    color: #11B4E2;
+}
