@@ -53,58 +53,80 @@ $(document).ready(function() {
     });
 
 
-    $(".yu-tab-outer-wrapper .yu-tab-content-nav button").click(function(e) {
-        e.preventDefault();
-        // If the clicked button already has the "active" class, do nothing
-            if ($(this).hasClass("active")) {
-                return;
-            }
-        // Get the target tab content div and image based on the clicked tab
+    // $(".yu-tab-outer-wrapper .yu-tab-content-nav button").click(function(e) {
+    //     e.preventDefault();
+    //     // If the clicked button already has the "active" class, do nothing
+    //         if ($(this).hasClass("active")) {
+    //             return;
+    //         }
+    //     // Get the target tab content div and image based on the clicked tab
+    //     var targetClass = $(this).attr("class");
+    //     var targetIndex = targetClass.replace("tab-nav-", "");
+    //     var targetContent = $(".yu-tab-outer-wrapper .tab-nav-" + targetIndex + "-content");
+    //     var targetImage = $(".yu-tab-outer-wrapper .tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
+        
+    //     // Hide all tab content divs and images
+    //     $(".yu-tab-outer-wrapper .yu-tab-content-nav-area > [class*='tab-nav-']").hide();
+        
+    //     // Remove active class from all tab links and tab content divs
+    //     $(".yu-tab-outer-wrapper .yu-tab-content-nav button").removeClass("active");
+    //     $(".yu-tab-outer-wrapper .yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
+        
+    //     // Add active class to the clicked tab link and tab content div
+    //     $(this).addClass("active");
+        
+    //     // Show the selected tab content div and image
+    //     targetContent.show().addClass("active");;
+    //     targetImage.show();
+    // });
+    
+    // $(".yu-tab-outer-wrapper2 .yu-tab-content-nav button").click(function(e) {
+    //     e.preventDefault();
+    //     // If the clicked button already has the "active" class, do nothing
+    //         if ($(this).hasClass("active")) {
+    //             return;
+    //         }
+    //     // Get the target tab content div and image based on the clicked tab
+    //     var targetClass = $(this).attr("class");
+    //     var targetIndex = targetClass.replace("tab-nav-", "");
+    //     var targetContent = $(".yu-tab-outer-wrapper2 .tab-nav-" + targetIndex + "-content");
+    //     var targetImage = $(".yu-tab-outer-wrapper2 .tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
+        
+    //     // Hide all tab content divs and images
+    //     $(".yu-tab-outer-wrapper2 .yu-tab-content-nav-area > [class*='tab-nav-']").hide();
+        
+    //     // Remove active class from all tab links and tab content divs
+    //     $(".yu-tab-outer-wrapper2 .yu-tab-content-nav button").removeClass("active");
+    //     $(".yu-tab-outer-wrapper2 .yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
+        
+    //     // Add active class to the clicked tab link and tab content div
+    //     $(this).addClass("active");
+        
+    //     // Show the selected tab content div and image
+    //     targetContent.show().addClass("active");;
+    //     targetImage.show();
+    // });
+    $('.yu-tab-content-nav button').on('click', function() {
+        if ($(this).hasClass("active")) {
+            return;
+        }
         var targetClass = $(this).attr("class");
         var targetIndex = targetClass.replace("tab-nav-", "");
-        var targetContent = $(".yu-tab-outer-wrapper .tab-nav-" + targetIndex + "-content");
-        var targetImage = $(".yu-tab-outer-wrapper .tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
-        
-        // Hide all tab content divs and images
-        $(".yu-tab-outer-wrapper .yu-tab-content-nav-area > [class*='tab-nav-']").hide();
-        
-        // Remove active class from all tab links and tab content divs
-        $(".yu-tab-outer-wrapper .yu-tab-content-nav button").removeClass("active");
-        $(".yu-tab-outer-wrapper .yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
-        
-        // Add active class to the clicked tab link and tab content div
-        $(this).addClass("active");
-        
-        // Show the selected tab content div and image
-        targetContent.show().addClass("active");;
-        targetImage.show();
+        var $parentWrapper = $(this).closest('.yu-tab-outer-wrapper');
+        var targetContent = $parentWrapper.find(".tab-nav-" + targetIndex + "-content");
+
+        // Remove "active" class from all buttons and content
+        $parentWrapper.find('.yu-tab-content-nav button').removeClass('active');
+        $parentWrapper.find('.yu-tab-content-nav-area div').removeClass('active');
+
+        // Add "active" class to the clicked button and content
+        $(this).addClass('active');
+        targetContent.addClass('active');
+
+        // Hide all content of other tabs
+        $parentWrapper.find('.yu-tab-content-nav-area [class*="tab-nav-"]').hide();
+
+        // Show the content of the clicked tab
+        targetContent.show();
     });
-    
-    $(".yu-tab-outer-wrapper2 .yu-tab-content-nav button").click(function(e) {
-        e.preventDefault();
-        // If the clicked button already has the "active" class, do nothing
-            if ($(this).hasClass("active")) {
-                return;
-            }
-        // Get the target tab content div and image based on the clicked tab
-        var targetClass = $(this).attr("class");
-        var targetIndex = targetClass.replace("tab-nav-", "");
-        var targetContent = $(".yu-tab-outer-wrapper2 .tab-nav-" + targetIndex + "-content");
-        var targetImage = $(".yu-tab-outer-wrapper2 .tab-nav-" + targetIndex + "-content .yu-tab-thumbnail img");
-        
-        // Hide all tab content divs and images
-        $(".yu-tab-outer-wrapper2 .yu-tab-content-nav-area > [class*='tab-nav-']").hide();
-        
-        // Remove active class from all tab links and tab content divs
-        $(".yu-tab-outer-wrapper2 .yu-tab-content-nav button").removeClass("active");
-        $(".yu-tab-outer-wrapper2 .yu-tab-content-nav-area > [class*='tab-nav-']").removeClass("active");
-        
-        // Add active class to the clicked tab link and tab content div
-        $(this).addClass("active");
-        
-        // Show the selected tab content div and image
-        targetContent.show().addClass("active");;
-        targetImage.show();
-    });
-    
 });
