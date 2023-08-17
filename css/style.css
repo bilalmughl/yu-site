@@ -4,6 +4,10 @@ font-family: 'Poppins', sans-serif; */
     margin: 0;
     box-sizing: border-box;
 }
+button,
+a{
+    cursor: pointer;
+}
 img{
     max-width: 100%;
     vertical-align: middle;
