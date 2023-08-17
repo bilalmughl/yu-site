@@ -461,7 +461,7 @@ nav a:hover{
 .yu-modes-section-1 .yu-modes-content h1{
     color: #1F1F1F;
     font-family: 'Poppins', sans-serif;
-    font-size: 48px;
+    font-size: clamp(24px, 5vw - 16px, 48px);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -473,7 +473,7 @@ nav a:hover{
 .yu-modes-section-1 .yu-modes-content p{
     color: #000;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: clamp(14px, 4vw - 14px, 20px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -963,5 +963,113 @@ background: #867E7E;
     }
     .yu-terms-wrapper .content h2{
         font-size: 24px;
+    }
+    .yu-modes-section-1{
+        padding-top: 181px;
+    }
+    .yu-modes-section-1 .container .row{
+        flex-direction: column-reverse
+    }
+    .yu-modes-section-1 .yu-modes-thumbnail{
+        padding: 0;
+    }
+    .yu-modes-section-1 .yu-modes-thumbnail img{
+        max-width: 100%;
+        margin: 0;
+    }
+    .yu-modes-section-1 .yu-modes-content {
+        padding: 36px 20px 58px;
+    }
+    .yu-modes-section-1 .yu-modes-content h1{
+        margin-bottom: 4px;
+    }
+    .yu-animatio-wrapper .yu-dot-2,
+    .yu-animatio-wrapper .yu-dot-1,
+    .yu-animatio-wrapper .yu-dot-3,
+    .yu-animatio-wrapper .yu-dot-4{
+        width: 86px;
+        height: 86px;
+    }
+    .yu-animatio-wrapper .yu-dot-1{
+        right: calc(50% - 40px);
+        top: calc(50% - 320px);
+    }
+    .yu-animatio-wrapper .yu-dot-2{
+        right: calc(50% - 240px);
+        bottom: calc(50% - 36px);
+    }
+    .yu-animatio-wrapper .yu-dot-3{
+        right: calc(50% - -130px);
+        bottom: calc(50% - -143px);
+    }
+    .yu-animatio-wrapper .yu-dot-4{
+        right: calc(50% - 210px);
+        top: calc(50% - 230px);
+    }
+    .yu-animatio-wrapper .yu-dot-5{
+        width: 384px;
+        height: 384px;
+        bottom: calc(50% - 550px);
+        left: calc(50% - 301px);
+        border: 90px solid rgba(255, 255, 255, 0.18);;
+    }
+    .yu-modes-section-2{
+        padding: 80px 0 100px;
+    }
+    .yu-modes-section-2 .yu-modes-content{
+        max-width: 232px;
+        margin: 0 auto;
+    }
+    .yu-modes-section-2 .yu-modes-thumbnail{
+        padding: 90px 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    .yu-modes-section-2 .yu-modes-thumbnail img{
+        max-width:650px;
+        margin-left: 75px;
+    }
+    .yu-modes-section-4 .col-lg-6:first-child{
+        clip-path: unset;
+        background: transparent;
+        box-shadow: none;
+    }
+    .yu-tab-content-area{
+        max-width:100%;
+        margin: 0;
+        padding: 40px 10px;
+    }
+    .yu-tab-content-icon{
+        max-width: 36px;
+        transform: scaleX(-1);
+        display: inline-flex;
+        margin-bottom: 14px;
+    }
+    .yu-tab-content-area .yu-modes-tab-content-title{
+        max-width: max-content;
+        display: inline-flex;
+    }
+    .yu-tab-content-area .yu-modes-tab-content-title{
+        font-size: 28px;
+        margin: 0
+    }
+    .yu-tab-content-area .yu-modes-tab-content-sub-title{
+        font-size: 20px;
+        line-height: normal;
+        margin-bottom: 15px;
+    }
+    .yu-tab-content-nav{
+        /* display: none; */
+    }
+    .yu-modes-section-3{
+        padding:90px 0 ;
+    }
+    .yu-modes-section-3 .yu-modes-content {
+        margin-bottom: 60px;
+        max-width: 313px;
+        margin: 0 auto 74px;
+    }
+    .yu-modes-section-3 .yu-modes-thumbnail{
+        padding: 0 60px;
     }
 }
