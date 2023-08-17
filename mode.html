@@ -9,7 +9,7 @@
     <title>Modes</title>
     
     <!-- Link to Bootstrap CSS and custom stylesheets -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
     <link href="css/style.css" rel="stylesheet">
     
     <!-- Link to Font Awesome icons and Google Fonts -->
@@ -24,13 +24,27 @@
             <div class="col-nav">
                 <!-- Navigation links -->
                 <nav>
-                    <a href="index.html">Home</a>
-                    <a class="active" href="modes.html">Modes</a>
-                    <a href="contact.html">Contact</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="active" href="mode.html">Modes</a>
+                            <ul class="sub-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </nav>
+                <div class="menu-icon" id="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </div>
             </div>
         </div>
     </header>
+    <div class="nav-sidr-wrap"></div>
     
     <!-- Main content section -->
     <main>
@@ -96,31 +110,67 @@
                         <div class="col-lg-6 d-flex align-items-end">
                             <div class="yu-tab-content-nav-area">
                                 <div  class="tab-nav-0-content active">
-                                    <div class="yu-tab-thumbnail">
-                                        <img src="img/yu-modes-section-4.png" alt="">
+                                    <div class="tab-content-wrapper">
+                                        <div class="yu-tab-thumbnail">
+                                            <img src="img/tab-1.svg" alt="">
+                                        </div>
                                     </div>
+                                    
                                 </div>
                                 <div  class="tab-nav-5-content">
-                                    <div class="yu-tab-thumbnail">
-                                        <img src="img/yu-modes-section-4.png" alt="">
+                                    <div class="tab-content-wrapper extra-links-tab">
+                                        <div class="tab-text">
+                                            <h6><Strong>External Link </Strong><span>Have a meeting code?</span></h6>
+                                            <p>Integration with popular conferencing applications: Younite seamlessly integrates with popular conferencing applications like Zoom, Teams, and GMeet. Join meetings as an invitee, bringing the powerful features of Younite to your existing conferencing workflow.</p>
+                                            <div class="text-svg"><img src="img/external-link.svg" alt=""></div>
+                                        </div>
+                                        <div class="yu-tab-thumbnail">
+                                            <img src="img/tab-2.svg" alt="">
+                                        </div>
+                                        <div class="absolute-icon-svg"><img src="img/vaadin_link.svg" alt=""></div>
                                     </div>
                                 </div>
                                 <div  class="tab-nav-6-content">
-                                    <div class="yu-tab-thumbnail">
-                                        <img src="img/yu-modes-section-5.png" alt="">
+                                    <div class="tab-content-wrapper dailin-tab">
+                                        <div class="tab-text">
+                                            <h6><Strong>Dial In </Strong></h6>
+                                            <p>Younite also provides the convenience of dialing cellular calls to contacts or numbers that don't have the Younite application. Stay connected with colleagues, friends, or clients, even if they are not Younite users.</p>
+                                            <div class="text-svg"><img src="img/dail-in.svg" alt=""></div>
+                                        </div>
+                                        <div class="yu-tab-thumbnail">
+                                            <img src="img/tab-3.svg" alt="">
+                                        </div>
+                                        <div class="absolute-icon-svg"><img src="img/dots.svg" alt=""></div>
                                     </div>
                                 </div>
                                 <div  class="tab-nav-7-content">
-                                    <div class="yu-tab-thumbnail">
-                                        <img src="img/yu-modes-section-4.png" alt="">
+                                    <div class="tab-content-wrapper join-qr-tab">
+                                        <div class="tab-text">
+                                            <h6><Strong>Join QR </Strong></h6>
+                                            <p>The QR simplifies the process of connecting and participating in conversations, events, and sessions. By leveraging QR code technology, users can quickly and securely join meetings, parties, or stage events with a seamless and hassle-free experience.</p>
+                                            <div class="text-svg"><img src="img/join-qr.svg" alt=""></div>
+                                        </div>
+                                        <div class="yu-tab-thumbnail">
+                                            <img src="img/tab-4.svg" alt="">
+                                        </div>
+                                        <div class="absolute-icon-svg"><img src="img/dots2.svg" alt=""></div>
                                     </div>
                                 </div>
                                 <div  class="tab-nav-8-content">
-                                    <div class="yu-tab-thumbnail">
-                                        <img src="img/yu-modes-section-4.png" alt="">
+                                    <div class="tab-content-wrapper extra-links-tab">
+                                        <div class="tab-text">
+                                            <h6><Strong>External Link </Strong><span>Have a meeting code?</span></h6>
+                                            <p>Integration with popular conferencing applications: Younite seamlessly integrates with popular conferencing applications like Zoom, Teams, and GMeet. Join meetings as an invitee, bringing the powerful features of Younite to your existing conferencing workflow.</p>
+                                            <div class="text-svg"><img src="img/external-link.svg" alt=""></div>
+                                        </div>
+                                        <div class="yu-tab-thumbnail">
+                                            <img src="img/tab-5.svg" alt="">
+                                        </div>
+                                        <div class="absolute-icon-svg"><img src="img/vaadin_link.svg" alt=""></div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="mobile-nav-tab"></div>
                         </div>
                     </div>
                 </div>
