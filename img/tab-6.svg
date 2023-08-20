@@ -1,4 +1,78 @@
 <svg width="879" height="975" viewBox="0 0 879 975" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+@-webkit-keyframes bounce1{0%, 100%{-webkit-transform:translateY(0);transform:translateY(0);}
+50%{-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+}
+@keyframes bounce1{0%, 100%{-webkit-transform:translateY(0);transform:translateY(0);}
+50%{-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+}
+.slide-up-down{
+    -webkit-animation: bounce1 3s ease-in-out infinite;
+    animation: bounce1 3s ease-in-out infinite;
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    -o-transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1), 
+    -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    will-change: transform;
+}
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+} 
+.show-hide{
+    -webkit-animation: fadeInLeft 3s ease-in-out;
+    animation: fadeInLeft 3s ease-in-out;
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    -o-transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1), 
+    -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+}  
+  .animatedPath {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 5s linear forwards infinite;
+  }
+  .animatedPath2 {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 10s linear forwards infinite;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+   path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  <!-- @keyframes colorChange {
+    0%, 100% {
+      stroke: #1F1F1F;
+    }
+    50% {
+      stroke: #FF5733;
+    }
+  } -->
+</style>
 <path d="M457.192 403.437L456.886 401.715C455.7 394.61 452.598 387.965 447.916 382.499C443.233 377.033 437.149 372.955 430.321 370.705C428.532 370.138 426.704 369.703 424.851 369.404C418.109 368.41 411.226 369.102 404.815 371.417C398.403 373.732 392.662 377.599 388.101 382.675C382.765 388.693 378.899 396.51 371.778 400.165C362.519 404.949 351.465 400.902 341.948 396.855C332.431 392.807 321.358 388.808 312.108 393.601C306.324 396.615 302.563 402.614 300.491 408.91C295.079 425.444 300.739 444.312 312.28 457.075C323.821 469.839 340.439 477.044 357.345 479.962C381.027 484.057 406.619 479.962 426.455 466.04C446.291 452.119 459.387 427.654 457.192 403.437Z" fill="#F5F5F5"/>
 <path d="M181.375 605.433C185.563 587.648 174.575 569.829 156.832 565.631C139.089 561.434 121.311 572.448 117.123 590.232C112.936 608.017 123.924 625.836 141.667 630.034C159.41 634.231 177.188 623.217 181.375 605.433Z" fill="#F5F5F5"/>
 <path d="M736.88 708.559C753.338 708.559 766.681 695.185 766.681 678.688C766.681 662.19 753.338 648.816 736.88 648.816C720.421 648.816 707.078 662.19 707.078 678.688C707.078 695.185 720.421 708.559 736.88 708.559Z" fill="#F5F5F5"/>

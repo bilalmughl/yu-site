@@ -1,4 +1,78 @@
 <svg width="946" height="763" viewBox="0 0 946 763" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+@-webkit-keyframes bounce1{0%, 100%{-webkit-transform:translateY(0);transform:translateY(0);}
+50%{-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+}
+@keyframes bounce1{0%, 100%{-webkit-transform:translateY(0);transform:translateY(0);}
+50%{-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+}
+.slide-up-down{
+    -webkit-animation: bounce1 3s ease-in-out infinite;
+    animation: bounce1 3s ease-in-out infinite;
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    -o-transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1), 
+    -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    will-change: transform;
+}
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+} 
+.show-hide{
+    -webkit-animation: fadeInLeft 3s ease-in-out;
+    animation: fadeInLeft 3s ease-in-out;
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    -o-transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1), 
+    -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+}  
+  .animatedPath {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 5s linear forwards infinite;
+  }
+  .animatedPath2 {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 10s linear forwards infinite;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+   path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  <!-- @keyframes colorChange {
+    0%, 100% {
+      stroke: #1F1F1F;
+    }
+    50% {
+      stroke: #FF5733;
+    }
+  } -->
+</style>
 <g opacity="0.4">
 <path d="M359.373 762.495C303.801 762.495 258.75 717.444 258.75 661.872C258.75 606.299 303.801 561.249 359.373 561.249C414.946 561.249 459.996 606.299 459.996 661.872C459.996 717.444 414.946 762.495 359.373 762.495Z" fill="#DDDDDD" fill-opacity="0.48"/>
 <path d="M100.623 417.508C45.0508 417.508 0.000457764 372.458 0.000457764 316.886C0.000457764 261.313 45.0508 216.263 100.623 216.263C156.196 216.263 201.246 261.313 201.246 316.886C201.246 372.458 156.196 417.508 100.623 417.508Z" fill="#DDDDDD" fill-opacity="0.28"/>

@@ -1,5 +1,17 @@
 <svg width="1106" height="139" viewBox="0 0 1106 139" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g style="mix-blend-mode:lighten" opacity="0.2">
+<style>
+   path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+</style><g style="mix-blend-mode:lighten" opacity="0.2">
 <path d="M29.382 40.5488V64.9469H68.7299V87.6267H29.382V114.087H73.8847V137.625H0V17.0099H73.8847V40.5488H29.382Z" fill="white"/>
 <path d="M149.662 137.625L131.277 110.994L115.813 137.625H84.025L115.641 88.6576L83.1659 41.7515H116.156L134.542 68.2114L150.006 41.7515H181.793L149.662 90.0321L182.652 137.625H149.662Z" fill="white"/>
 <path d="M247.412 112.712V137.625H232.463C221.81 137.625 213.505 135.048 207.548 129.894C201.592 124.625 198.613 116.091 198.613 104.293V66.1496H186.929V41.7515H198.613V18.3844H227.995V41.7515H247.24V66.1496H227.995V104.637C227.995 107.5 228.683 109.562 230.057 110.822C231.432 112.082 233.723 112.712 236.93 112.712H247.412Z" fill="white"/>

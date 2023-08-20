@@ -1,5 +1,78 @@
 <svg width="838" height="453" viewBox="0 0 838 453" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="M607.778 453H646.268V385.732H579V424.222C579 432.136 581.82 438.913 587.461 444.554C593.101 450.194 599.874 453.01 607.778 453ZM675.046 453H741.954V385.732H675.046V453ZM770.732 453H809.222C817.136 453 823.913 450.18 829.554 444.539C835.194 438.899 838.01 432.126 838 424.222V385.732H770.732V453ZM579 356.954H646.268V290.046H579V356.954ZM675.046 356.954H741.954V290.046H675.046V356.954ZM770.732 356.954H838V290.046H770.732V356.954ZM579 261.268H646.268V194H607.778C599.864 194 593.087 196.82 587.446 202.461C581.806 208.101 578.99 214.874 579 222.778V261.268ZM675.046 261.268H741.954V194H675.046V261.268ZM770.732 261.268H838V222.778C838 214.864 835.18 208.087 829.539 202.446C823.899 196.806 817.126 193.99 809.222 194H770.732V261.268Z" fill="#A55DFF" fill-opacity="0.44"/>
+<style>
+@-webkit-keyframes bounce1{0%, 100%{-webkit-transform:translateY(0);transform:translateY(0);}
+50%{-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+}
+@keyframes bounce1{0%, 100%{-webkit-transform:translateY(0);transform:translateY(0);}
+50%{-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+}
+.slide-up-down{
+    -webkit-animation: bounce1 3s ease-in-out infinite;
+    animation: bounce1 3s ease-in-out infinite;
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    -o-transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1), 
+    -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    will-change: transform;
+}
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+} 
+.show-hide{
+    -webkit-animation: fadeInLeft 3s ease-in-out;
+    animation: fadeInLeft 3s ease-in-out;
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+    -o-transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1);
+    transition: transform 300ms cubic-bezier(0,0,0.3,1), 
+    -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
+}  
+  .animatedPath {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 5s linear forwards infinite;
+  }
+  .animatedPath2 {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 10s linear forwards infinite;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+   path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  <!-- @keyframes colorChange {
+    0%, 100% {
+      stroke: #1F1F1F;
+    }
+    50% {
+      stroke: #FF5733;
+    }
+  } -->
+</style><path d="M607.778 453H646.268V385.732H579V424.222C579 432.136 581.82 438.913 587.461 444.554C593.101 450.194 599.874 453.01 607.778 453ZM675.046 453H741.954V385.732H675.046V453ZM770.732 453H809.222C817.136 453 823.913 450.18 829.554 444.539C835.194 438.899 838.01 432.126 838 424.222V385.732H770.732V453ZM579 356.954H646.268V290.046H579V356.954ZM675.046 356.954H741.954V290.046H675.046V356.954ZM770.732 356.954H838V290.046H770.732V356.954ZM579 261.268H646.268V194H607.778C599.864 194 593.087 196.82 587.446 202.461C581.806 208.101 578.99 214.874 579 222.778V261.268ZM675.046 261.268H741.954V194H675.046V261.268ZM770.732 261.268H838V222.778C838 214.864 835.18 208.087 829.539 202.446C823.899 196.806 817.126 193.99 809.222 194H770.732V261.268Z" fill="#A55DFF" fill-opacity="0.44"/>
 <g clip-path="url(#clip0_51_6692)">
 <g clip-path="url(#clip1_51_6692)">
 <g filter="url(#filter0_b_51_6692)">
