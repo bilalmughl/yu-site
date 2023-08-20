@@ -92,7 +92,7 @@ main {
     right: 0;
     left: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     transition: all 0.3s ease-in-out;
 }
 
