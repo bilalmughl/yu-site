@@ -78,7 +78,14 @@ $(document).ready(function() {
     });
 
     $('.sub-menu').each(function() {
-        $(this).closest('li').addClass('has-item');
+        var $submenu = $(this);  // Current submenu element
+        var $menuItem = $submenu.closest('li');  // Closest ancestor list item
+        
+        $menuItem.addClass('has-item');  // Add 'has-item' class to list item
+        
+        // Add a <div> element with class "nav-arrow" inside the list item
+        // $('<div class="nav-arrow"></div>').appendTo($menuItem);
+        $('<div class="nav-arrow"></div>').insertBefore($submenu);
     });
 
     var navContent = $(".col-nav").html();
@@ -89,15 +96,23 @@ $(document).ready(function() {
         $("body").toggleClass("is-open");
     });
 
-    $(window).on("resize", function() {
-        if ($(window).width() <= 768) {
-            $(".col-nav ul li").off("mouseenter mouseleave");
-        } else {
-            $(".col-nav ul li").off("click");
-            handleSubmenuInteraction();
-        }
-    });
+    $('.sub-menu').slideUp(); // Slide up all sub-menus by default
 
+    $('.nav-sidr-wrap .has-item > .nav-arrow').click(function(e) {
+      e.preventDefault(); // Prevent the default link behavior
+  
+      var subMenu = $(this).next('.sub-menu'); // Find the corresponding sub-menu
+  
+      if (subMenu.is(':visible')) {
+        subMenu.slideUp(); // Close the sub-menu if it's visible
+        $(this).parent('.has-item').removeClass('open'); // Remove "open" class
+      } else {
+        $('.sub-menu').slideUp(); // Close all other open sub-menus
+        $('.has-item').removeClass('open'); // Remove "open" class from other items
+        subMenu.slideDown(); // Slide down the clicked sub-menu
+        $(this).parent('.has-item').addClass('open'); // Add "open" class
+      }
+    });
     $('.meeting-indicator').each(function(index) {
         var indicator = $(this);
         var h5 = indicator.find('.meeting-title h5');

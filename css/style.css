@@ -178,7 +178,29 @@ main {
     padding: 14px 0;
     transition: all 0.1s ease-in-out;
 }
-
+.has-item{
+    position: relative;
+}
+.nav-arrow{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 7px;
+    right: 0;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 15L7.75696 10.758L9.17196 9.34399L12 12.172L14.828 9.34399L16.243 10.758L12 15.001V15Z' fill='%231F1F1F'/%3E%3C/svg%3E");
+}
+.has-item:hover .nav-arrow,
+.has-item.open .nav-arrow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 15L7.75696 10.758L9.17196 9.34399L12 12.172L14.828 9.34399L16.243 10.758L12 15.001V15Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+.yu-header .nav-arrow{
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);    
+}
 .yu-header nav > ul > li > a {
     color: #1F1F1F;
     font-family: 'Poppins', sans-serif;
@@ -191,6 +213,7 @@ main {
     align-items: center;
     justify-content: center;
     border-radius: 40px;
+    padding: 10px 30px;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
@@ -316,7 +339,7 @@ main {
     align-items: flex-start;
     overflow: hidden;
 }
-/* .main-banner-outer::before{
+.main-banner-outer::before{
     content: "";
     left: 0;
     right: 0;
@@ -325,11 +348,11 @@ main {
     margin: 0 auto;
     max-width: 1132px;
     position: absolute;
-    background-image: url('../img/main-banner-bg.png');
+    /* background-image: url('../img/main-banner-bg.png'); */
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100%;
-} */
+}
 .main-banner {
     text-align: center;
     position: relative;
@@ -1234,6 +1257,39 @@ background: #867E7E;
     }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1250px) {
+    .meeting-indicator-outer {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .iphone-image-wrapper{
+        margin-bottom: -222px;
+    }
+    .user-eduardo {
+        bottom: calc(50% - 39px);
+        left: calc(50% - 236px);
+    }
+    .user-admin {
+        bottom: calc(50% - 141px);
+        left: calc(50% - 361px);
+    }
+    .user-kyle {
+        bottom: calc(50% - 73px);
+        left: calc(50% - 86px);
+    }
+    .user-courtney {
+        bottom: calc(50% - 220px);
+        left: calc(50% - -47px);
+    }
+    .user-cameron {
+        bottom: calc(50% - 140px);
+        right: calc(50% - 707px);
+    }
+    .user-arthur {
+        bottom: calc(50% - 13px);
+        right: calc(50% - 747px);
+    }
+}
 @media screen and (max-width: 991px) {
     .nav-sidr-wrap,
     .menu-icon{
@@ -1299,7 +1355,7 @@ background: #867E7E;
         height: 100%;
         z-index: 2;
         width: 100%;
-        padding: 30px;
+        padding: 30px 0;
         background-color: #FFF;
         transition: left 0.3s ease-in-out; 
     }
@@ -1322,8 +1378,11 @@ background: #867E7E;
         list-style: none;
         padding: 0;
         display: flex;
-        gap:10px;
+        /* gap:10px; */
         flex-direction: column;
+    }
+    .nav-sidr-wrap nav ul li{
+        /* min-height: 28px; */
     }
     .nav-sidr-wrap nav ul a{
         color: #1F1F1F;
@@ -1331,8 +1390,18 @@ background: #867E7E;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        padding: 6px;
+        padding: 10px 30px;
         text-decoration: none;
+        display: block;
+    }
+    .nav-sidr-wrap .sub-menu li a{
+        font-size:12px;
+    }
+    .nav-sidr-wrap .has-item.open{
+        background-color: #11B4E2;
+    }
+    .nav-sidr-wrap .has-item.open *{
+        color: #fff;
     }
     .yu-contact-wrapper{
         margin-bottom: 50px;
@@ -1345,15 +1414,22 @@ background: #867E7E;
     }
 }
 @media screen and (max-width: 768px) {
+    .meeting-indicator-outer{
+        display: none;
+    }
     .main-banner-outer{
         min-height: auto;
         padding-top: 99px;
         padding-bottom: 110px;
     }
+    
     .main-banner-outer::before{
         top: 0;
         background-size: auto;
         background-image: url('../img/main-banner-mobile-bg.png');
+    }
+    .iphone-image-wrapper{
+        margin-bottom: 0;
     }
     .iphone-image-wrapper::before{
         bottom: 47%;
