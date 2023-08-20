@@ -85,7 +85,9 @@ img {
 main {
     overflow: hidden;
 }
-
+.hide{
+    display: none;
+}
 /* Header styles */
 .yu-header {
     top: 44px;
