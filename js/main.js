@@ -18,22 +18,6 @@ $(document).ready(function() {
         $(this).next(".sub-menu").slideToggle();
     });
 
-    // $(".tabs a").click(function(e) {
-    //     e.preventDefault();
-    //     var targetIndex = $(this).attr("class").replace("tab-nav-", "");
-    //     var targetContent = $(".tab-content-" + targetIndex);
-    //     var targetImage = $(".tab-img-" + targetIndex + " img");
-
-    //     $(".content > [class*='tab-content-']").hide().removeClass("active");
-    //     $(".tab-content-image > [class*='tab-img-']").hide();
-
-    //     $(".tabs a").removeClass("active");
-    //     $(this).addClass("active");
-
-    //     targetContent.show().addClass("active");
-    //     targetImage.show().addClass("active");
-    // });
-
     $(".yu-asidebar-container li a").on('click', function(event) {
         $('.yu-asidebar-container li a').removeClass('active');
         $(this).addClass('active');
@@ -54,28 +38,43 @@ $(document).ready(function() {
         $parentWrapper.find('.yu-tab-content-nav-area [class*="tab-nav-"]').hide();
         targetContent.show();
     });
-
+    
     $('.yu-tab-outer-wrapper').each(function() {
         var $parentWrapper = $(this);
         var $mobileNavTab = $parentWrapper.find('.mobile-nav-tab');
         var $tabContentNavClone = $parentWrapper.find('.yu-tab-content-nav').clone();
         $tabContentNavClone.appendTo($mobileNavTab);
-
+    
         $mobileNavTab.find('button').on('click', function() {
             var targetClass = $(this).attr("class");
             var targetIndex = targetClass.replace("tab-nav-", "");
             var targetContent = $parentWrapper.find(".tab-nav-" + targetIndex + "-content");
-
+    
             $parentWrapper.find('.yu-tab-content-nav button').removeClass('active');
             $parentWrapper.find('.yu-tab-content-nav-area div').removeClass('active');
-
+    
             $(this).addClass('active');
             targetContent.addClass('active');
-
+    
             $parentWrapper.find('.yu-tab-content-nav-area [class*="tab-nav-"]').hide();
             targetContent.show();
+    
+            // Additional code to control display of tab content
+            if (targetIndex === '0' && $(this).hasClass('active')) {
+                $parentWrapper.find('.yu-tab-content-area').css('display', 'block');
+            } else {
+                $parentWrapper.find('.yu-tab-content-area').css('display', 'none');
+            }
         });
+    
+        // Additional code to set initial tab content display
+        if ($mobileNavTab.find('.tab-nav-0.active').length > 0) {
+            $parentWrapper.find('.yu-tab-content-area').css('display', 'block');
+        } else {
+            $parentWrapper.find('.yu-tab-content-area').css('display', 'none');
+        }
     });
+    
 
     $('.sub-menu').each(function() {
         var $submenu = $(this);  // Current submenu element
@@ -144,8 +143,12 @@ $(document).ready(function() {
         const targetSectionId = $(this).attr("data-href");
         const targetSection = $("#" + targetSectionId);
     
-        $("html, body").animate({
+    $("html, body").animate({
           scrollTop: targetSection.offset().top
         }, 800); // Adjust the animation speed as needed
-      });
+    });
+
+    // $('.mobile-nav-tab .tab-nav-0.active').closest('.yu-tab-outer-wrapper').find('.yu-tab-content-area').addClass('yu-tab-active');
+    // $('.mobile-nav-tab .tab-nav-0').closest('.yu-tab-outer-wrapper').find('.yu-tab-content-area').removeClass('yu-tab-active');
+  
 });

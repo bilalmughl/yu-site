@@ -95,6 +95,7 @@ main {
     left: 0;
     position: fixed;
     z-index: 4;
+    padding: 0 30px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -225,7 +226,7 @@ main {
 .yu-header nav li.has-item a.active,
 .yu-header nav a:hover {
     color: #fff;
-    backdrop-filter: blur(64px);
+    /* backdrop-filter: blur(64px); */
     box-shadow: 0px 4px 4px 0px rgba(192, 172, 172, 0.21);
     background-color: #11B4E2;
 }
@@ -461,6 +462,75 @@ main {
     .iphone-image-wrapper img{
         transform: rotate(-90deg) translateX(121px);
     }
+}
+@keyframes smoothVibrate {
+    0%, 100% {
+      transform: translate(0);
+    }
+  
+    25% {
+      transform: translate(-1px, 1px);
+    }
+  
+    50% {
+      transform: translate(1px, -1px);
+    }
+  
+    75% {
+      transform: translate(-1px, -1px);
+    }
+  }
+.meeting-indicator-img-mobile{
+    position: absolute;
+    animation: smoothVibrate 0.4s 10;
+}
+.meeting-indicator-img-mobile span{
+    display:block;
+    width: 23px;
+    height:45px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/img/banner-mobile-phone-img.png');
+}
+.user-eduardo .meeting-indicator-img-mobile {
+    bottom: -99px;
+    left: 70px;
+}
+.user-eduardo .meeting-indicator-img-mobile span {
+    transform: rotate(90deg);
+}
+.user-admin .meeting-indicator-img-mobile{
+    bottom: 97px;
+    right: -39px;
+}
+.user-kyle .meeting-indicator-img-mobile {
+    bottom: -26px;
+    left: -8px;
+}
+.user-kyle .meeting-indicator-img-mobile span {
+    transform: rotate(-15deg);
+}
+.user-courtney .meeting-indicator-img-mobile{
+    bottom: 145px;
+    left: -8px;
+}
+.user-courtney .meeting-indicator-img-mobile span{
+    transform: rotate(-15deg);
+}
+.user-cameron .meeting-indicator-img-mobile {
+    bottom: 70px;
+    right: 240px;
+}
+.user-cameron .meeting-indicator-img-mobile span{
+    transform: rotate(-22deg);
+}
+.user-arthur .meeting-indicator-img-mobile{
+    bottom: -84px;
+    left: -52px;
+}
+.user-arthur .meeting-indicator-img-mobile span{
+    transform: rotate(-90deg);
 }
 /**/
 .yu-footer{
@@ -1628,6 +1698,9 @@ background: #867E7E;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1250px) {
+    .meeting-indicator-img-mobile span{
+        display: none;
+    }
     .meeting-indicator-outer {
         max-width: 768px;
         margin: 0 auto;
@@ -1637,7 +1710,7 @@ background: #867E7E;
     }
     .user-eduardo {
         bottom: calc(50% - 39px);
-        left: calc(50% - 236px);
+        left: 0;
     }
     .user-admin {
         bottom: calc(50% - 141px);
@@ -1653,11 +1726,11 @@ background: #867E7E;
     }
     .user-cameron {
         bottom: calc(50% - 140px);
-        right: calc(50% - 707px);
+        right:0;
     }
     .user-arthur {
         bottom: calc(50% - 13px);
-        right: calc(50% - 747px);
+        right: 0;
     }
 }
 @media screen and (max-width: 991px) {
@@ -1723,11 +1796,14 @@ background: #867E7E;
         left: -175px;
         top: 82px;
         height: 100%;
-        z-index: 2;
+        z-index: 3;
         width: 100%;
         padding: 30px 0;
         background-color: #FFF;
         transition: left 0.3s ease-in-out; 
+    }
+    .nav-sidr-wrap .nav-arrow{
+        right: 20px;
     }
     /* body.is-open main{
         left: 175px;
@@ -1802,7 +1878,8 @@ background: #867E7E;
         background-image: url('../img/main-banner-mobile-bg.png');
     }
     .iphone-image-wrapper{
-        margin-bottom: 0;
+        margin:0 auto;
+        max-width: 172px;
     }
     .iphone-image-wrapper::before{
         bottom: 47%;
