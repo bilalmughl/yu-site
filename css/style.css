@@ -491,7 +491,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/img/banner-mobile-phone-img.png');
+    background-image: url('../img/banner-mobile-phone-img.png');
 }
 .user-eduardo .meeting-indicator-img-mobile {
     bottom: -99px;
