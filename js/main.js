@@ -150,5 +150,15 @@ $(document).ready(function() {
 
     // $('.mobile-nav-tab .tab-nav-0.active').closest('.yu-tab-outer-wrapper').find('.yu-tab-content-area').addClass('yu-tab-active');
     // $('.mobile-nav-tab .tab-nav-0').closest('.yu-tab-outer-wrapper').find('.yu-tab-content-area').removeClass('yu-tab-active');
+    $('input').on('input', function() {
+        var inputValue = $(this).val();
+
+        // Validation condition
+        if (inputValue.length >= 0) {
+            $(this).removeClass('invalid').addClass('valid');
+        } else {
+            $(this).removeClass('valid').addClass('invalid');
+        }
+    });
   
 });
