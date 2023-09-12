@@ -1,4 +1,16 @@
 <svg width="687" height="953" viewBox="0 0 687 953" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+   path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+  }
+</style>
 <g opacity="0.4">
 <path d="M359.373 756.495C303.8 756.495 258.75 711.444 258.75 655.872C258.75 600.3 303.8 555.249 359.373 555.249C414.945 555.249 459.996 600.3 459.996 655.872C459.996 711.444 414.945 756.495 359.373 756.495Z" fill="#DDDDDD" fill-opacity="0.48"/>
 <path d="M100.623 411.508C45.0504 411.508 -3.05176e-05 366.458 -3.05176e-05 310.885C-3.05176e-05 255.313 45.0504 210.262 100.623 210.262C156.195 210.262 201.246 255.313 201.246 310.885C201.246 366.458 156.195 411.508 100.623 411.508Z" fill="#DDDDDD" fill-opacity="0.28"/>

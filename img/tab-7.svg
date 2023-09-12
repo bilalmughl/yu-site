@@ -1,4 +1,16 @@
 <svg width="1057" height="682" viewBox="0 0 1057 682" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+   path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+  }
+</style>
 <g style="mix-blend-mode:hard-light" opacity="0.3" filter="url(#filter0_d_474_17075)">
 <g clip-path="url(#clip0_474_17075)">
 <rect width="66.83" height="135.13" transform="matrix(-0.994522 0.104528 0.707107 0.707107 826.788 398.776)" fill="url(#pattern0)"/>

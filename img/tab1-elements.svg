@@ -1142,27 +1142,24 @@
           animation: animate-svg-stroke-27 1s cubic-bezier(0.47, 0, 0.745, 0.715) 3.12s both,
                animate-svg-fill-27 0.7s linear 3.4000000000000004s both;
 }
-   path {
+ path {
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
-    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
-  }
+    animation: dash 1500s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 1500s ease-in-out alternate infinite;
+}
 
-  @keyframes dash {
+@keyframes dash {
     to {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
-  }
-  @keyframes fadeInLeft {
-   0% {
-      opacity: 0;
-      transform: translateY(-20px);
-   }
-   100% {
-      opacity: 1;
-      transform: translateY(0);
-   }
-} 
+}
+
+@keyframes colorChange {
+    to {
+        stroke: red; /* Replace 'newColor' with your desired color */
+    }
+}
+ 
 </style>
 <g clip-path="url(#clip0_14_597)">
 <path d="M0 420.274C6.88889 418.897 77.8827 417.023 112.519 416.258L122.278 387C125.722 408.226 132.611 450.106 132.611 447.811C132.611 445.516 136.438 417.405 138.352 403.637L145.815 427.732L151.556 395.032L160.167 427.732L167.056 416.258H304.833L309.426 432.321L319.185 408.226C321.864 422.569 327.222 450.565 327.222 447.811C327.222 445.057 332.198 411.477 334.685 395.032L346.167 427.732L349.611 416.258H403" stroke="#1F1F1F" stroke-opacity="0.4" stroke-width="1.94268" class="svg-elem-1"></path>

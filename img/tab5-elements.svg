@@ -1,9 +1,16 @@
 
 <svg width="422" height="392" viewBox="0 0 422 392" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style>
-    #paint2_linear_17_292{
-        background:red;
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
     }
+  }
+   path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+  }
 </style>
 <path d="M3 172.538L8 181L20 159" stroke="white" stroke-opacity="0.61" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 <g filter="url(#filter0_b_17_292)">
