@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    /*
+      ============================================================
+           Page Loader Javascript
+      ============================================================
+    */
+      $(window).on('load', function() {
+        $("body").imagesLoaded(function() {
+            $(".loader-cont").fadeOut();
+            $("#loader-overflow").delay(200).fadeOut(700);
+        });
+    });
     // Sticky header behavior
     var targetElement = $('.yu-header');
     var scrollPoint = 100;
