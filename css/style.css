@@ -1068,7 +1068,7 @@ main {
     display: grid;
     gap: 32px;
     margin: 108px 0 0;
-    max-width: 602p x;
+    max-width: 602px;
     position: relative;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -1829,6 +1829,14 @@ background: #867E7E;
   }
 }
 @media screen and (max-width: 1201px) {
+    .yu-tab-content-area .yu-tab-content-nav{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .yu-tab-content-area .yu-tab-content-nav > button{
+        flex-grow: 1;
+    }
     .yu-tab-content-nav-area{
         margin-top: auto;
         /* margin-bottom: 0; */
