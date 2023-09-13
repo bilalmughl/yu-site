@@ -155,8 +155,17 @@ if it's not present, don't show loader */
     }
   }
 /* Main content overflow */
+body.is-open{
+    overflow-x: hidden;
+}
+body.is-open footer,
+body.is-open main{
+    margin-left: 175px;
+    transition:margin 0.3s ease-in-out;
+}
 main {
     overflow: hidden;
+    transition:margin 0.3s ease-in-out;
 }
 .hide{
     display: none;
@@ -619,6 +628,7 @@ main {
 }
 /**/
 .yu-footer{
+    transition:margin 0.3s ease-in-out;
     padding: 60px 0 0;
 }
 .yu-footer .container{
