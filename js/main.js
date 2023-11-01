@@ -7,7 +7,7 @@ $(document).ready(function() {
       $(window).on('load', function() {
         $("body").imagesLoaded(function() {
             $(".loader-cont").fadeOut();
-            $("#loader-overflow").delay(200).fadeOut(700);
+            $("#loader-overflow").delay(100).fadeOut(700);
         });
     });
     // Sticky header behavior

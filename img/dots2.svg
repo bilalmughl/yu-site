@@ -3,7 +3,7 @@
    path {
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
-    animation: dash 8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
+    animation: dash 3s cubic-bezier(0.4, 0.0, 0.2, 1) infinite, colorChange 8s ease-in-out alternate infinite;
   }
 
   @keyframes dash {
