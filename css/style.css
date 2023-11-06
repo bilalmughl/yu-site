@@ -326,7 +326,7 @@ main {
 .yu-header nav ul li.has-item:hover .sub-menu,
 .yu-header nav ul li.has-item:hover,
 .yu-header nav ul li.has-item.active {
-    background-color: #fff;
+    background-color: #F5F5F5;
     transition: all 0.3s ease-in-out;
 }
 .yu-header nav ul li.has-item:hover > a.active{
@@ -351,13 +351,28 @@ main {
     position: absolute;
     left: 0;
     min-width: 150px;
-    padding: 8px;
+    padding: 0px 0 15px;
     border-radius: 0 0 16px 16px;
     transition: all 0.3s ease-in-out;
     background-color: #11B4E2;
-    box-shadow: 0px 4px 4px 0px rgba(82, 82, 82, 0.10);;
 }
-
+.yu-header .sub-menu::before {
+    --header-height:82px;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: inherit;
+    top: calc(-1 * var(--header-height));
+    height: calc(100% + var(--header-height),82px);
+    border-radius: inherit;
+    box-shadow: 0px 4px 4px 0px rgba(82, 82, 82, 0.10);
+}
+.yu-header nav ul li.has-item:hover a{
+    z-index: 1;
+    position: relative;
+}
 .yu-header nav ul li.has-item:hover .sub-menu {
     display: flex;
 }
@@ -379,10 +394,8 @@ main {
     transition: all .3s ease-in-out;
 }
 .yu-header .sub-menu li:hover > a{
-    /* background-color: #F5F5F5; */
-    border-radius: 40px;
-    color: #fff;
-    background-color: #11B4E2;
+    color: #1F1F1F;
+    background-color: #fff;
 }
 /* Menu icon styles */
 .menu-icon {
@@ -523,13 +536,27 @@ main {
     backdrop-filter: blur(5.925436496734619px);
     border: 7px solid #FFF;
     min-width: 164px;
-
-
-    background: linear-gradient(to right, #11B4E2 50%, white 50%);
+}
+.btn-wrapper .btn > *{
+    position: relative;
+}
+.btn-wrapper .btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(to right, #11B4E2 50%, rgba(255, 255, 255, 0) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
+    transition: inherit;
 }
 .btn-wrapper .btn:hover{
+    color: #fff;
+}
+.btn-wrapper .btn:hover::before{
     color: #fff;
     /* background-color: #11B4E2; */
     background-position: left bottom;
@@ -537,7 +564,7 @@ main {
 .btn-wrapper .btn img{
     transition: all .3s ease-in-out;
 }
-.btn-wrapper .btn:hover img[alt="AppleStore"]{
+.btn-wrapper .btn:hover img{
     filter: brightness(0) invert(1);
 }
 .iphone-image-wrapper{
