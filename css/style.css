@@ -981,10 +981,10 @@ main {
     
 }
 .yu-modes-section-1 .yu-modes-thumbnail .svg-box-animation{
-        margin: -15px 0px 0 -19px;
-        position: relative;
-        z-index: 1;
-    max-height: 552px;
+    margin: -15px 0px 0 -19px;
+    position: relative;
+    z-index: 1;
+    max-height: 710px;
 }
 .yu-modes-section-1 .yu-modes-thumbnail .svg-box-animation img.circular-tab-img{
     animation: rotate 100s linear infinite;
