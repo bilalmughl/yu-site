@@ -1055,11 +1055,14 @@ main {
 .yu-modes-section-2 .yu-modes-content{
     margin-bottom: 70px;
 }
-
+.yu-tab-thumbnail{
+    max-height: 862px;
+}
 .yu-modes-section-3 {
     padding: 123px 0 65px;
     text-align: center;
     position: relative;
+    overflow: hidden;
     background: 
       url('../img/party/sparkles.svg') center/auto no-repeat,
       url('../img/party/bg-color.svg') center/cover repeat,
@@ -1545,8 +1548,8 @@ background: rgba(165, 93, 255, 0.28);
     z-index: 1;
 }
 .chat-tab .yu-tab-thumbnail img{
-    margin:0;
-    max-width: inherit
+    margin:0 0 -132px;
+    /* max-width: inherit */
 }
 @keyframes fadeAnimation2 {
     0% {
@@ -1559,9 +1562,9 @@ background: rgba(165, 93, 255, 0.28);
         opacity: .4;
     }
 }
-.chat-tab .yu-tab-thumbnail img:not(.absolute){
+/* .chat-tab .yu-tab-thumbnail img:not(.absolute){
     animation: fadeAnimation2 3s infinite, bounce2 5s ease-in-out infinite;;
-}
+} */
 .dailin-tab .yu-tab-thumbnail img:not(.absolute){
     animation: fadeAnimation2 3s infinite;
 }
@@ -2169,7 +2172,44 @@ background: #867E7E;
         right: 0;
     }
 }
+@media screen and (max-width: 1200px) {
+    .yu-modes-section-4 .col-lg-6{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .yu-tab-content-nav-area,
+    .yu-tab-outer-wrapper .yu-tab-content-area{
+        max-width: 100%;
+        margin: 0;
+        padding: 0px 50px 0;
+    }
+    .yu-tab-outer-wrapper .yu-tab-content-area{
+        padding-top: 100px;
+    }
+    .yu-modes-section-4 .col-lg-6:first-child{
+        clip-path: none;
+        background-color: transparent;
+    }
+    .yu-tab-thumbnail img{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .yu-tab-thumbnail{
+        text-align: center;
+    }
+    .chat-tab .yu-tab-thumbnail{
+        margin: 0 !important;
+    }
+}
 @media screen and (max-width: 991px) {
+    .yu-tab-content-nav-area{
+        padding-left: 0px;
+        padding-right: 0;
+    }
+    .yu-tab-outer-wrapper .yu-tab-content-area{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     .yu-tab-thumbnail{
         margin: 0 !important;
     }
@@ -2219,10 +2259,7 @@ background: #867E7E;
     .mobile-nav-tab{
         display: block;
     }
-    .yu-modes-section-4 .col-lg-6{
-        width: 100% !important;
-        margin: 0 !important;
-    }
+    
     .yu-tab-content-nav-area{
         width: 100%;
         margin-bottom: 100px;
