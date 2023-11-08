@@ -966,7 +966,7 @@ main {
       transform: rotate(0deg);
     }
   }
-/* .meet-tab .yu-tab-thumbnail .absolute, */
+.meet-tab .yu-tab-thumbnail .absolute,
 .party-main-tab .yu-tab-thumbnail{
     
     -webkit-animation: bounce2 3s ease-in-out infinite;
@@ -1225,6 +1225,7 @@ main {
     min-width: 1106px;
     margin: -60px 0 0 -110px;
 }
+
 .dailin-tab{
     padding: 78px 0 0 0;
     position: relative;
@@ -1233,13 +1234,13 @@ main {
     margin: -60px 0 -30px;
 }
 .dailin-tab .yu-tab-thumbnail{
-    margin:0 0 -297px -143px;
+    margin:-4px 0 0 -15px;
     z-index: 1;
     position: relative;
 }
 .dailin-tab .yu-tab-thumbnail .absolute{
     position: absolute;
-    left: calc(100% - 687px);
+    left: 126px;
 }
 .dailin-tab .absolute-icon-svg {
     position: absolute;
@@ -1414,24 +1415,6 @@ background: rgba(165, 93, 255, 0.28);
     right: 85px;
     bottom: 0;
 }
-img.circl{
-    position: absolute;
-   left: 245px;
-    bottom: -320px;
-    animation: spin 100s linear infinite;
-}
-img.screen{
-    position: absolute;
-    left: 390px;
-    bottom: 78px;
-    animation: bounce1 3s ease-in-out infinite;
-    -webkit-transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
-    transition: -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
-    -o-transition: transform 300ms cubic-bezier(0,0,0.3,1);
-    transition: transform 300ms cubic-bezier(0,0,0.3,1);
-    transition: transform 300ms cubic-bezier(0,0,0.3,1), -webkit-transform 300ms cubic-bezier(0,0,0.3,1);
-    will-change: transform;
-}
 .party-main-tab .yu-tab-thumbnail{
     padding: 152px 0 0;
 }
@@ -1576,8 +1559,10 @@ img.screen{
         opacity: .4;
     }
 }
-.dailin-tab .yu-tab-thumbnail img:not(.absolute),
 .chat-tab .yu-tab-thumbnail img:not(.absolute){
+    animation: fadeAnimation2 3s infinite, bounce2 5s ease-in-out infinite;;
+}
+.dailin-tab .yu-tab-thumbnail img:not(.absolute){
     animation: fadeAnimation2 3s infinite;
 }
 .chat-tab .yu-tab-thumbnail .absolute{
@@ -2123,6 +2108,7 @@ background: #867E7E;
     }
     .yu-tab-content-area .yu-tab-content-nav > button{
         flex-grow: 1;
+        min-width: 150px;
     }
     .yu-tab-content-nav-area{
         margin-top: auto;
@@ -2132,8 +2118,8 @@ background: #867E7E;
         right: 0;
         left: 0;
         margin:  0 auto;
-        bottom: auto;
-        top: 0;
+        top: auto;
+        bottom: 0;
     }
      .yu-tab-thumbnail{
         margin-left: 50px;
