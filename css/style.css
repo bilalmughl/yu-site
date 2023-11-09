@@ -1667,6 +1667,9 @@ background: rgba(165, 93, 255, 0.28);
     padding:  37px 32px 37px 52px;
     box-shadow: -16.151718139648438px 59px 43.071250915527344px 0px rgba(15, 15, 15, 0.25);
 }
+.yu-privacy-container .yu-asidebar-container{
+    display: none;
+}
 .yu-asidebar-container ul{
     counter-reset: item;
 }
@@ -1712,6 +1715,22 @@ background: rgba(165, 93, 255, 0.28);
     overflow-y: scroll;
     scroll-behavior: smooth;
     padding: 0 30px;
+}
+.yu-privacy-container .yu-terms-wrapper-scroll{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.yu-privacy-container .yu-terms-wrapper .content{
+    width: 100%;
+    max-width: calc(100% - 30px);
+}
+table{
+    border-spacing: 0;
+    border-color: rgba(190, 190, 190, 0.20);
+}
+td{
+    padding: 10px;
 }
 @media screen and (min-width: 1242px) {
     .yu-terms-wrapper-scroll{
@@ -1799,6 +1818,7 @@ background: #867E7E;
     animation: spin 1s linear infinite;
     margin-right: 10px;
 }
+.yu-terms-container p a,    
 .theme-color{
     color: #11B4E2;
 }
